@@ -5,16 +5,17 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class Beans {
-	//MemberDAO ∫Û µÓ∑œ
+
+	// MemberDAO ∫Û µÓ∑œ
 	@Bean
 	public MemberDAO memberDAO() {
 		return new MemberDAO();
 	}
 	
-	//MemberService ∫Û µÓ∑œ
+	// MemberService ∫Û µÓ∑œ
 	@Bean
 	public MemberService memberService() {
-		MemberServiceImp service = new MemberServiceImp();
+		MemberServiceImpl service = new MemberServiceImpl();
 		service.setMemberDao(memberDAO()); // ¿«¡∏º∫ ¡÷¿‘
 		return service;
 	}

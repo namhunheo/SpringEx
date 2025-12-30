@@ -4,11 +4,12 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- MemberDAO 빈 등록 -->
-	<bean id="memberDAO" class="chapter02.MemberDAO"></bean>
+	<bean id="memberDAO" class="chapter02.MemberDAO"/>
 	
 	<!-- MemberService 빈 등록 -->
 	<bean id="memberService" class="chapter02.MemberServiceImpl">
-		<!-- MemberDAO 빈을 주입 -->
-		<property name="memberDao" ref="memberDAO"></property>
-	</bean>	
+		<!-- MemberDAO빈을 주입 -->
+		<property name="memberDao" ref="memberDAO"/>
+	</bean>
+	
 </beans>
